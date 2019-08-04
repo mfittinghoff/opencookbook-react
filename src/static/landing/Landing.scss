@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+
+.landing-wrapper {
+  color: $font-color-secondary;
+  background: url("./food_landing.jpg") no-repeat bottom;
+  background-size: cover;
+  text-align: center;
+  padding: $default-padding-left-right;
+  min-height: 40vh;
+}

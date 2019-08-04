@@ -1,0 +1,16 @@
+$font-color-primary: #d79922;
+$font-color-secondary: #84efc3;
+
+$link-color-primary: $font-color-secondary;
+$link-color-secondary: $font-color-primary;
+
+$hover-color: #606376;
+
+$background-color-primary: #4056a1;
+$background-color-hover: $font-color-secondary;
+
+$border-color: $hover-color;
+
+$default-padding-top-bottom: 0.67em;
+$default-padding-left-right: .4em;
+$default-padding-full: $default-padding-top-bottom $default-padding-left-right;
