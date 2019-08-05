@@ -1,0 +1,17 @@
+button {
+  background: $background-color-primary;
+  border: 3px solid $background-color-primary;
+  color: $font-color-primary;
+  padding: .2em .8em;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out;
+  &:focus, &:hover {
+    border-color: $background-color-hover;
+  }
+  &:hover, &:active {
+    color: $hover-color;
+    background-color: $background-color-hover;
+  }
+}

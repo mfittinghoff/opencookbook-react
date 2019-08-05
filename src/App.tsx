@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import { Header } from './header/Header';
 import { Landing } from './static/landing/Landing';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';

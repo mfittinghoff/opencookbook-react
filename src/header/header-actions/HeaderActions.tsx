@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '../../shared/controls/button/Button';
+import { Button } from '../../shared/controls/Button';
 
 export const HeaderActions: React.FC = () => {
     return (

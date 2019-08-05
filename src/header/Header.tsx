@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './Header.scss';
 import { HeaderActions } from './header-actions/HeaderActions';
 import { Link } from 'react-router-dom';
 

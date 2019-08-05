@@ -1,10 +1,9 @@
 import * as React from 'react';
-import './Landing.scss';
 import { Link } from 'react-router-dom';
 
 export const Landing: React.FC = () => {
     return (
-        <div className="landing-wrapper">
+        <div className="front-page-container v-container-40">
             <h2>Managing your recipes made easy</h2>
             <p>
                 With opencookbook, you can create your own recipes and access them on any device,

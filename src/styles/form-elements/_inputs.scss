@@ -1,8 +1,7 @@
-@import "../../../styles/variables";
-
 .input-row {
   margin: $default-margin-full;
   span {
+    text-align: left;
     display: block;
     min-width: 220px;
   }

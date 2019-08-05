@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { InputText } from '../../shared/form-elements/inputs/InputText';
+import { InputText } from '../../shared/form-elements/InputText';
 import { State } from '../../types-and-models/props-and-state/state.types';
 import { SignUpDto } from '../../types-and-models/dtos/auth/sign-up.dto';
-import { InputPassword } from '../../shared/form-elements/inputs/InputPassword';
+import { InputPassword } from '../../shared/form-elements/InputPassword';
+import { Button } from '../../shared/controls/Button';
 
 export const SignUp: React.FC = () => {
-    const [signUp, setSignUp]: State<SignUpDto> = React.useState(
-        {
+    const getDefaults = () => {
+        return {
             username: '',
             password: '',
             repeatPassword: '',
-        });
+        };
+    };
+    const [signUp, setSignUp]: State<SignUpDto> = React.useState(getDefaults());
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { target } = event;
         const updatedSignUp = {
@@ -19,9 +22,13 @@ export const SignUp: React.FC = () => {
         };
         setSignUp(updatedSignUp);
     };
+    const handleReset = () => setSignUp(getDefaults);
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+    };
     return (
-        <div className="large-container">
-            <form>
+        <div className="v-container-40 front-page-container">
+            <form className="medium-container" onReset={handleReset} onSubmit={handleSubmit}>
                 <InputText
                     id={'sign-up-username'}
                     name={'username'}
@@ -44,6 +51,10 @@ export const SignUp: React.FC = () => {
                     value={signUp.repeatPassword}
                     changeHandler={handleChange}
                 />
+                <div className="flex-row justify-space-between default-margin">
+                    <Button label={'Reset'} type={'reset'}/>
+                    <Button label={'Submit'} type={'submit'}/>
+                </div>
             </form>
         </div>
     );

@@ -1,4 +1,4 @@
-import { PropsWithoutChildren } from '../../../types-and-models/props-and-state/props.types';
+import { PropsWithoutChildren } from '../../types-and-models/props-and-state/props.types';
 import * as React from 'react';
 
 export type InputProps<T extends boolean | string | number> =
