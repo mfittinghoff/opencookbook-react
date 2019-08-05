@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.input-row {
+  margin: $default-margin-full;
+  span {
+    display: block;
+    min-width: 220px;
+  }
+  input {
+    flex-grow: 1;
+    min-width: 300px;
+    @media only screen and (max-width: 400px) {
+      min-width: unset;
+    }
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+  color: $font-color-primary;
+  border: 1px solid $border-color;
+  transition: border-color .2s ease-in-out;
+  outline: none;
+  padding: 1px $default-padding-left-right;
+  &:focus {
+    border-color: $font-color-primary;
+  }
+}

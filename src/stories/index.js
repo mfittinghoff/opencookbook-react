@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
-import {InputText} from "../shared/form-elements/input-text/InputText";
+import {InputText} from "../shared/form-elements/inputs/InputText";
 
 import '../styles/index.scss';
 import '../App.scss';
@@ -24,5 +24,5 @@ storiesOf('Button', module)
 
 storiesOf('InputText', module)
     .add('example', () => {
-       return <InputText label={'Label'} initialValue={'Initial'} changeHandler={action('Input Changed')} />
+       return <InputText label={'Label'} value={'Initial'} changeHandler={action('Input Changed')} />
     });

@@ -1,9 +1,12 @@
-import { PropsWithoutChildren } from '../../../types/props.types';
+import { PropsWithoutChildren } from '../../../types-and-models/props-and-state/props.types';
 import * as React from 'react';
 
 export type InputProps<T extends boolean | string | number> =
     {
         label: string,
-        initialValue: T,
-        changeHandler: React.Dispatch<React.SetStateAction<T>>,
+        value: T,
+        id: string,
+        name: string,
+        changeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void,
+        placeholder?: string,
     } & PropsWithoutChildren;
