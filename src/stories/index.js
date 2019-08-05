@@ -24,5 +24,5 @@ storiesOf('Button', module)
 
 storiesOf('InputText', module)
     .add('example', () => {
-       return <InputText label={'Label'} value={'Initial'} changeHandler={action('Input Changed')} />
+       return <InputText label={'Label'} initialValue={'Initial'} changeHandler={action('Input Changed')} />
     });
